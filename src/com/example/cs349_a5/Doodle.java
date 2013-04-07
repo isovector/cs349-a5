@@ -33,6 +33,7 @@ public class Doodle implements AnimSerializable {
         }
         
         paint.setColor(Color.BLACK);
+        paint.setStyle(Paint.Style.STROKE);
     }
 
     public void paint(Canvas g, int frame) {

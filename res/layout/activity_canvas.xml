@@ -11,14 +11,48 @@
          TextureView, etc.
     -->
 
+    <com.example.cs349_a5.CanvasView
+        android:id="@+id/canvasView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <!--
          This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows.
     -->
 
-    <com.example.cs349_a5.CanvasView
-        android:id="@+id/canvasView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progress="24" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ToggleButton"
+                android:textOff="❚❚"
+                android:textOn="▶" />
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 </FrameLayout>

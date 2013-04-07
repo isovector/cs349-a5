@@ -16,6 +16,7 @@ public class Animation implements AnimSerializable {
     public LinkedList<Doodle> doodles = new LinkedList<Doodle>();
 
     public int currentFrame = 0;
+	public boolean playing = false;
     
     @Override
     public void serialize(AnimSerializer json) throws IOException {
