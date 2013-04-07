@@ -1,6 +1,5 @@
 package com.example.cs349_a5;
 
-
 public class Line {
     Vector2D source;
     Vector2D dest;
@@ -15,7 +14,7 @@ public class Line {
         dest = new Vector2D(x1, y1);
     }
     
-    public void paint(Graphics g) {
-        g.drawLine((int)source.x, (int)source.y, (int)dest.x, (int)dest.y);
+    public void paint(android.graphics.Path g) {
+    	g.lineTo(dest.x, dest.y);
     }
 }

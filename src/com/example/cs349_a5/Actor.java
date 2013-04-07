@@ -3,6 +3,7 @@ package com.example.cs349_a5;
 import java.io.IOException;
 import java.util.LinkedList;
 
+import android.graphics.Canvas;
 import android.graphics.Rect;
 
 /**
@@ -43,7 +44,7 @@ public class Actor implements AnimSerializable {
         path.add(new SpaceTime(frame, pos));
     }
     
-    public void paint(Graphics g, int frame) {
+    public void paint(Canvas g, int frame) {
         Vector2D pos = (position != null) ? position : path.at(frame);
         g.translate((int)pos.x, (int)pos.y);
         
