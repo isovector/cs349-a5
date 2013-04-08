@@ -32,9 +32,10 @@ public class CanvasView extends View {
 				invalidate();
 			}
 			
-			handler.postDelayed(mUpdateTimeTask, 1000 / 24);
+			handler.postDelayed(mUpdateTimeTask, 1000 / Preferences.frameRate);
 	   }
 	};
+	
 
 	public CanvasView(Context context) {
 		super(context);
@@ -75,6 +76,8 @@ public class CanvasView extends View {
 
 		int contentWidth = getWidth() - paddingLeft - paddingRight;
 		int contentHeight = getHeight() - paddingTop - paddingBottom;
+		
+		canvas.drawRGB(Preferences.bgRed , Preferences.bgGreen, Preferences.bgBlue);
 		
 		if (animation != null) {
 			animation.paint(canvas, contentWidth, contentHeight);

@@ -36,16 +36,15 @@
             android:orientation="horizontal"
             tools:ignore="UselessParent" >
 
-            <SeekBar
-                android:id="@+id/seekBar1"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:progress="24" />
+                android:text="Settings" />
 
             <ToggleButton
                 android:id="@+id/toggleButton1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ToggleButton"
                 android:textOff="❚❚"

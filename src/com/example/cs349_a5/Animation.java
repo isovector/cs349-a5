@@ -36,8 +36,6 @@ public class Animation implements AnimSerializable {
     }
     
     void paint(Canvas g, int width, int height) {
-    	g.drawColor(Color.WHITE);
-        
         for (Doodle doodle : doodles) {
             doodle.paint(g, currentFrame);
         }
