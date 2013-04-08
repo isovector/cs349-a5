@@ -39,6 +39,9 @@ public class CanvasActivity extends Activity {
 			@Override
 			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
 				canvas.animation.playing = arg1;
+				if (arg1) {
+					canvas.animation.currentFrame = 0;
+				}
 				
 			}
 		});
@@ -49,10 +52,6 @@ public class CanvasActivity extends Activity {
 			public void onClick(View arg0) {
 				Intent intent = new Intent(activity, SettingsActivity.class);
 				activity.startActivity(intent);
-				try {
-					intent.wait();
-					canvas.animation.currentFrame = 0;
-				} catch (Exception e) {}
 			}
 		});
 	}
